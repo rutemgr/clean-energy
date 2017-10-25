@@ -11,17 +11,15 @@ var options = {
     }
 };
 
-function callback(error, response, body) {
-    console.log(response.statusCode);
-    if(!error && response.statusCode == 200) {
-        var info = JSON.parse(body);
-        console.log(info);
-    }
-}
-
 router.get('/', function (req, res, next) {
     console.log("in router!");
-    request(options, callback);
+    request(options, function(error, response, body) {
+		if (!error && response.statusCode == 200) {
+			var info = JSON.parse(body);
+			console.log(info);;
+			res.send(info);
+		}
+	});
 });
 
 router.get('/wind', function (req, res, next) {
