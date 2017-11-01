@@ -4,8 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../javascript/charts/Chart.bundle.js"></script>
+	
 </head>
 <body>
+	<div align="center">
+		<canvas id="myChart" style='position: relative; max-height: 500px; max-width: 500px;'></canvas>
+	</div>
+	<script>
+
+	var ctx = document.getElementById("myChart").getContext('2d');
+	var myBarChart = new Chart(ctx, {
+		type: 'bar',
+		data: {
+			labels: [],
+			datasets: [{
+			label: "My First dataset",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [],
+			}]
+		}
+	});
+	
+	$.ajax({
+		type: 'GET',
+		url: "/test/",
+		success: function(result) {
+			myBarChart.data.labels.push("Tuuli");
+			myBarChart.data.datasets.forEach((dataset) => {
+				dataset.data.push(result.value);
+			});
+			myBarChart.update();
+		}
+	});
+	</script>
+
     <button id="refreshButton" type="button">Refresh data</button>
 
 	<script>
