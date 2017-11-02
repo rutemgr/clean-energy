@@ -2,56 +2,35 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="../javascript/charts/Chart.bundle.js"></script>
+	<script src="../javascript/charts/chartjs-plugin-datalabels.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
+	<link href="css/navbar-top-fixed.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
 </head>
 <body>
-	<div align="center">
-		<canvas id="myChart" style='position: relative; max-height: 500px; max-width: 500px;'></canvas>
+	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand navbarText" href="#" style="color: #92D2D9; font-size: 28px;">Puhdas sähköntuotanto</a>
+		</div>
+	  </div>
+	</nav>
+	  
+	<div id="chartContainer" align="center" style="margin-top: 70px">
+		<p align="center" id="percentage" style="font-size: 40px; color: ghostwhite; padding-top: 30px; padding-bottom: 10px">% CO2-vapaata sähköntuotantoa</p>
+		<canvas id="mainChart" style='position: relative; max-width: 960px'></canvas>
 	</div>
-	<script>
-
-	var ctx = document.getElementById("myChart").getContext('2d');
-	var myBarChart = new Chart(ctx, {
-		type: 'bar',
-		data: {
-			labels: [],
-			datasets: [{
-			label: "My First dataset",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [],
-			}]
-		}
-	});
 	
-	$.ajax({
-		type: 'GET',
-		url: "/test/",
-		success: function(result) {
-			myBarChart.data.labels.push("Tuuli");
-			myBarChart.data.datasets.forEach((dataset) => {
-				dataset.data.push(result.value);
-			});
-			myBarChart.update();
-		}
-	});
-	</script>
+	<div id="mainContainer"></div>
 
-    <button id="refreshButton" type="button">Refresh data</button>
-
-	<script>
-	$('#refreshButton').click(function() {
-		$.ajax({
-			type: 'GET',
-			url: "/test/",
-			success: function(result) {
-			   console.log(result);
-			}
-		});
-	});
-	</script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="javascript/mainchart.js"></script>
+	<script src="javascript/getdata.js"></script>
 </body>
 </html>

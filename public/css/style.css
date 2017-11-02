@@ -1,0 +1,47 @@
+body {
+	font-family: "Roboto"; !important
+ }
+
+#mainChart {
+	max-width: 800px;
+}
+
+#chartContainer {
+	background-color: #92D2D9;
+}
+
+#mainContainer {
+	background-color: #F5F2F4;
+}
+
+#navbar {
+	background-color: white !important;
+	padding: 10px;
+}
+
+.navbar-brand {
+	color: white; !important
+}
+
+#navbar.scrolled {
+    background-color: white !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#navbar.scrolledOver {
+    background-color: #92D2D9;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+.navbarText.reversed {
+	color: #92D2D9 !important;
+}
+
+.pageLink {
+	color: white !important;
+	font-size: 18px;
+}

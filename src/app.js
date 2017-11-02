@@ -4,7 +4,7 @@ var app = express();
 var routes = require('../routes/');
 
 app.use(express.static('../public'));
-app.use('/test', routes);
+app.use('/power', routes);
 
 app.listen(3000, function() {
     console.log('Server running!');

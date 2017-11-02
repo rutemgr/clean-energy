@@ -1,24 +1,10 @@
-var request = require('request');
-
 var apis = [
 	{name: 'wind', id: '181', url: 'https://api.fingrid.fi/v1/variable/181/event/json'},
 	{name: 'water', id: '191', url: 'https://api.fingrid.fi/v1/variable/191/event/json'},
 	{name: 'solar', id: '248', url: 'https://api.fingrid.fi/v1/variable/248/event/json'},
-	{name: 'nuclear', id: '188', url: 'https://api.fingrid.fi/v1/variable/188/event/json'}
+	{name: 'nuclear', id: '188', url: 'https://api.fingrid.fi/v1/variable/188/event/json'},
+	{name: 'total', id: '74', url: 'https://api.fingrid.fi/v1/variable/74/event/json'},
 ];
-
-function doRequest(name) {
-	var options = createOptions(name);
-	var data = '';
-	request(options, function(error, response, body) {
-		if (!error && response.statusCode == 200) {
-			var apiData = JSON.parse(body);
-			data = apiData;
-		}
-	});
-	
-	return data;
-}
 
 function createOptions(name) {
 	var api = findApi(name);
@@ -46,6 +32,6 @@ function findApi(name) {
 	return obj;
 }
 
-exports.doRequest = doRequest;
+exports.createOptions = createOptions;
 
 
