@@ -3,18 +3,75 @@
 <head>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="../javascript/charts/Chart.bundle.js"></script>
 	<script src="../javascript/charts/chartjs-plugin-datalabels.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
 	<link href="css/navbar-top-fixed.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-	<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+
+	<nav>
+    <div id="main-nav" class="nav-wrapper">
+      <a href="#" id="" class="brand-logo">Puhdas sähkö</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="">Tuuli</a></li>
+				<li><a href="">Vesi</a></li>
+				<li><a href="">Aurinko</a></li>
+				<li><a href="">Ydinvoima</a></li>
+      </ul>
+    </div>
+	</nav>
+	<div id="first-section" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<h4 id="percentage">% CO2-vapaata sähköntuotantoa</h4>
+				</div>
+				<div class="col s12">
+					<canvas id="mainChart" style='max-width: 760px'></canvas>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="second-section" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col s3"><a class="waves-effect waves-light btn" style="height: 100%; padding: 15px; background-color: white"><img src="img/eolic-energy.png" alt="" width="128" height="128" style="display: block; margin: auto;"></a></div>
+				<div class="col s3"><img src="img/hydro-power.png" alt="" width="128" height="128" style="display: block; margin: auto;"></div>
+				<div class="col s3"><img src="img/solar-energy.png" alt="" width="128" height="128" style="display: block; margin: auto;"></div>
+				<div class="col s3"><img src="img/nuclear-plant.png" alt="" width="128" height="128" style="display: block; margin: auto;"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="third-section" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 l4">
+					<h5>Tämä sivu</h5>
+					<p class="info-text">Tietoa tästä sivusta</p>
+				</div>
+				<div class="col s12 l4">
+					<h5>Puhdas sähköntuotanto</h5>
+					<p class="info-text">Mitä puhdas sähköntuotanto on</p>
+				</div>
+				<div class="col s12 l4">
+					<h5>Data</h5>
+					<p class="info-text">Tältä sivulta löytyvä data perustuu Fingrid Oyj:n avoimeen dataan, joka saatavilla osoiteessa 
+					<a href="https://data.fingrid.fi/">https://data.fingrid.fi/</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!--<nav id="navbar" class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 		<div class="navbar-header">
 		  <a class="navbar-brand navbarText" href="#" style="color: #92D2D9; font-size: 28px;">Puhdas sähköntuotanto</a>
@@ -27,9 +84,8 @@
 		<canvas id="mainChart" style='position: relative; max-width: 960px'></canvas>
 	</div>
 	
-	<div id="mainContainer"></div>
-
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<div id="mainContainer"></div>-->
+	<script type="text/javascript" src="js/materialize.js"></script>
 	<script src="javascript/mainchart.js"></script>
 	<script src="javascript/getdata.js"></script>
 </body>

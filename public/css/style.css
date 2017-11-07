@@ -1,7 +1,7 @@
 body {
-	font-family: "Roboto"; !important
- }
-
+	font-family: "Roboto";
+}
+/*
 #mainChart {
 	max-width: 800px;
 }
@@ -44,4 +44,39 @@ body {
 .pageLink {
 	color: white !important;
 	font-size: 18px;
+}*/
+
+#main-nav {
+	background-color: #81b9bf;
 }
+
+#logo {
+	margin-left: 10px;
+}
+
+#first-section {
+	background-color: #b2ebf2;
+}
+
+#percentage {
+	text-align: center;
+	padding: 10px;
+}
+
+#mainChart {
+	margin: auto;
+}
+
+#second-section {
+	background-color: #f5f5f5;
+}
+
+h5 {
+	text-align: center;
+}
+
+.info-text {
+	font-size: 18px;
+	text-align: center;
+}
+
