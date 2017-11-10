@@ -1,0 +1,3 @@
+Vesi - tuntitieto (tällä hetkellä vain reaaliaikatieto)
+Ydinvoima - tuntitieto
+Aurinko - Tämänhetkinen tieto, ei varmaan saatavilla (arvio?)

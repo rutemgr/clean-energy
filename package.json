@@ -9,7 +9,10 @@
   "author": "rutemgr",
   "license": "ISC",
   "dependencies": {
+    "angular-chart.js": "^1.1.1",
     "chart.js": "^2.7.1",
+    "date-and-time": "^0.5.0",
+    "dateformat": "^3.0.2",
     "express": "^4.16.2"
   }
 }

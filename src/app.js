@@ -1,11 +1,12 @@
 var express = require('express');
 var app = express();
 
-var routes = require('../routes/');
-
+// Set static files location to public folder
 app.use(express.static('../public'));
-app.use('/power', routes);
 
-app.listen(3000, function() {
+// Routes
+require('../routes')(app);
+
+app.listen(8080, function() {
     console.log('Server running!');
 });

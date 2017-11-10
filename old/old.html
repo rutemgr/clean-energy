@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../javascript/charts/Chart.bundle.js"></script>
+	<script src="../javascript/charts/chartjs-plugin-datalabels.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<link href="css/navbar-top-fixed.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<nav>
+    <div id="main-nav" class="nav-wrapper">
+      <a href="#" id="logo" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li class="active"><a href="">Etusivu</a></li>
+				<li><a href="">Tuuli</a></li>
+				<li><a href="">Vesi</a></li>
+				<li><a href="">Aurinko</a></li>
+				<li><a href="">Ydinvoima</a></li>
+      </ul>
+    </div>
+	</nav>
+	<div id="first-section" class="section">
+		<div class="container">
+			<div class="row" style="margin-bottom: 0; margin-top: 10px;">
+					<div class="col s12 m6 l6" style="padding-bottom: 0; margin-bottom: 0;">
+					<h3 id="percentage">%</h3>
+					<h5 id="percentage-text">CO2-vapaata sähköntuotantoa</h5>
+					<p id="percentage-updated">(päivitetty 8.11.2017 13:25)</p>
+				</div>
+				<div class="col s12 m6 l6" style="padding-bottom: 0; margin-bottom: 0;">
+					<canvas id="mainChart" style='max-width: 1000px'></canvas>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<div id="second-section" class="section">
+		<div class="container">
+			<div class="row" style="margin-bottom: 10px; margin-top: 0px;">
+				<div class="col s12" style="padding: 0px">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="third-section" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col s12 m12 l4">
+					<h5>Tämä sivu</h5>
+					<p class="info-text">Tietoa tästä sivusta</p>
+				</div>
+				<div class="col s12 m12 l4">
+					<h5>Puhdas sähköntuotanto</h5>
+					<p class="info-text">Mitä puhdas sähköntuotanto on</p>
+				</div>
+				<div class="col s12 m12 l4">
+					<h5>Data</h5>
+					<p class="info-text">Tältä sivulta löytyvä data perustuu Fingrid Oyj:n avoimeen dataan, joka saatavilla osoiteessa 
+					<a href="https://data.fingrid.fi/">https://data.fingrid.fi/</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/materialize.js"></script>
+	<script src="javascript/mainchart.js"></script>
+	<script src="javascript/getdata.js"></script>
+</body>
+</html>

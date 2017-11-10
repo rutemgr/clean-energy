@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script src="../javascript/charts/Chart.bundle.js"></script>
+		<script src="../javascript/charts/chartjs-plugin-datalabels.min.js"></script>
+		
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+	</head>
+
+	<!--<body ng-app="cleanEnergy">
+		<nav>
+			<div id="main-nav" class="nav-wrapper">
+				<a href="#" id="logo" class="brand-logo">Logo</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li class="active"><a href="#/!">Etusivu</a></li>
+					<li><a href="#!tuuli">Tuuli</a></li>
+					<li><a href="#!vesi">Vesi</a></li>
+					<li><a href="#!aurinko">Aurinko</a></li>
+					<li><a href="#!ydinvoima">Ydinvoima</a></li>
+				</ul>
+			</div>
+		</nav>-->
+		
+		<a href="#!tuuli">Red</a>
+		<a href="#!vesi">Green</a>
+		<a href="#!aurinko">Blue</a>
+		
+		<div ng-view></div>
+		
+		<script>
+			var app = angular.module("cleanEnergy", ["ngRoute"]);
+			app.config(function($routeProvider) {
+					$routeProvider
+					.when("/", {
+							templateUrl : "index.html"
+					})
+					.when("/tuuli", {
+							templateUrl : "test.html"
+					})
+					.when("/vesi", {
+							templateUrl : "green.html"
+					})
+					.when("/aurinko", {
+							templateUrl : "blue.html"
+					})
+					.when("/ydinvoima", {
+							templateUrl : "blue.html"
+					});
+			});
+		</script>
+		
+	</body>
+	
+</html>

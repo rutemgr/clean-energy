@@ -1,22 +1,24 @@
+console.log("In getdata!");
+
 // Ajax calls to get data from server 
 var dataValues = [0,0,0,0,0];
 var percentage = 0;
 var counter = 0; 
 
-$.ajax({
+/*$.ajax({
 	type: 'GET',
-	url: "/power/wind",
+	url: "/api/wind",
 	success: function(result) {
-		dataValues[0] = result.data.value;
+		//dataValues[0] = result.data.value;
 		console.log(result.data.value);
-		myBarChart.data.datasets.forEach((dataset) => {
-			dataset.data[0] = result.data.value;
-		});
-		myBarChart.update();
-		countOnComplete();
+		//myBarChart.data.datasets.forEach((dataset) => {
+			//dataset.data[0] = result.data.value;
+		//});
+		//myBarChart.update();
+		//countOnComplete();
 	}
-});
-
+});*/
+/*
 $.ajax({
 	type: 'GET',
 	url: "/power/water",
@@ -82,4 +84,4 @@ function countOnComplete() {
 		console.log(text);
 		$("#percentage").text(Math.round(percentage) + text);
 	}
-}
+}*/

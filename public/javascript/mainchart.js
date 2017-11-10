@@ -8,14 +8,15 @@ var config = {
 		label: "",
 		data: [100,100,100,100, 100],
 		datalabels: {
-						align: 'center',
-						anchor: 'center',
+						align: 'start',
+						anchor: 'end',
 					},
-		backgroundColor: ['#bae429', '#7092be', '#ffc90e', '#c3c3c3', '#c8bfe7'],
+		backgroundColor: ['#78de28', '#1689fc', '#ffc90e', '#ffcc33', '#FF6347'],
 		fill: false,
     }]
   },
   options: {
+	barthickness: 10,
 	responsive: true,
     legend: {
     	display: false
@@ -35,23 +36,23 @@ var config = {
 				drawBorder: false,
 			},
 			ticks: {
-                fontSize: 20,
+				fontSize: 16,
 				fontColor: 'white',
             }
 		}],
 		yAxes: [{
 			gridLines: {
-				display: false,
+				display: true,
 				drawBorder: false,
 			},
 			ticks: {
-                display: false,
+                display: true,
             }			
 		}]
     },
 	plugins: {
 		datalabels: {
-			color: 'white',
+			color: 'black',
 			display: function(context) {
 				return context.dataset.data[context.dataIndex] > 15;
 			},
