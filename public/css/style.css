@@ -63,10 +63,11 @@ body {
 }
 
 #percentage {
-	text-align: center;
-	color: black;
-	margin-bottom: 0;
-	padding-bottom: 0;
+	color: white;
+}
+
+#percentage-text {
+  color: white;
 }
 
 #mainChart {
@@ -74,7 +75,7 @@ body {
 }
 
 #second-section {
-	background-color: #eceff0;
+	background-color: white;
 }
 
 h5 {

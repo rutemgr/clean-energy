@@ -1,6 +1,55 @@
 <div ng-controller="MainController">
-		<canvas id="bar" class="bar chart-bar" chart-data="data"
-		chart-labels="labels" chart-series="series" chart-options="options"
-		chart-dataset-override="datasetOverride" chart-click="onClick">
-		</canvas
+    
+<div id="first-section" class="section">
+  <div class="container">
+    <div class="row" style="margin-bottom: 0; margin-top: 10px;">
+      <div class="col s4 valign-wrapper" style="padding-bottom: 0; margin-bottom: 0; height: 400px;">
+        <div><h3 class="center" id="percentage">{{totalClean}}%</h3>
+        <h5 class="center" id="percentage-text">CO2-vapaata sähköntuotantoa</h5></div>
+      </div>
+      <div class="col s8" style="padding-bottom: 0; margin-bottom: 0;">
+        <div google-chart chart="mainChart1" style="height:400px; width:100%; border-radius: 25px;
+        border: 15px solid #378ca9;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<!--<div id="second-section" class="section">
+  <div class="container">
+    <div class="row" style="margin-bottom: 10px; margin-top: 0px;">
+      <div class="col s12 m6 l6" style="padding-bottom: 0; margin-bottom: 0;">
+        <div google-chart chart="mainChart1" style="height:300px; width:100%; border-radius: 25px;
+        border: 15px solid #6DBCDB;"></div>
+      </div>
+      <div class="col s12 m6 l6" style="padding-bottom: 0; margin-bottom: 0;">
+
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div id="third-section" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l4 center">
+        <i class="material-icons" style="font-size: 72px;">home</i>
+        <h5>Tämä sivu</h5>
+        <p class="info-text">Tietoa tästä sivusta</p>
+      </div>
+      <div class="col s12 m12 l4 center">
+        <i class="material-icons" style="font-size: 72px;">flash_on</i>
+        <h5>Puhdas sähköntuotanto</h5>
+        <p class="info-text">Mitä puhdas sähköntuotanto on</p>
+      </div>
+      <div class="col s12 m12 l4 center">
+        <i class="material-icons" style="font-size: 72px;">info_outline</i>
+        <h5>Data</h5>
+        <p class="info-text">Tältä sivulta löytyvä data perustuu Fingrid Oyj:n avoimeen dataan, joka saatavilla osoiteessa 
+        <a href="https://data.fingrid.fi/">https://data.fingrid.fi/</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 </div>

@@ -6,34 +6,34 @@
 
 	<link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
 	<script src="javascript/angularjs/angular.js"></script>
 	<!-- JS -->
 	<script src="javascript/angularjs/angular-route.js"></script>
 
 	<script src="javascript/lib/charts/Chart.min.js"></script>
-	<script src="javascript/lib/charts/angular-chart.js"></script>
+  <script src="javascript/google-charts/ng-google-chart.js" type="text/javascript"></script>
 	
 	<!--ANGULARJS FILES-->
 	<script src="javascript/app.js"></script>
 	<script src="javascript/controllers/MainController.js"></script>
 	<script src="javascript/services/ApiService.js"></script>
 
-	<link href="css/navbar-top-fixed.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body ng-app="cleanEnergy" ng-controller="MainController">
+    <!--MAIN NAVIGATION-->
 	<nav>
     <div id="main-nav" class="nav-wrapper">
-      <a href="#" id="logo" class="brand-logo">Logo</a>
+      <a href="#" id="logo" class="brand-logo">Puhdas sähköntuotanto</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li class="active"><a href="#!/">Etusivu</a></li>
-				<li><a href="#!/tuuli">Tuuli</a></li>
-				<li><a href="#!/vesi">Vesi</a></li>
-				<li><a href="#!/aurinko">Aurinko</a></li>
-				<li><a href="#!/ydinvoima">Ydinvoima</a></li>
+        <li class="active"><a href="#!/">Etusivu</a></li>
+        <li><a href="#!/tuuli">Tuuli</a></li>
+        <li><a href="#!/vesi">Vesi</a></li>
+        <li><a href="#!/aurinko">Aurinko</a></li>
+        <li><a href="#!/ydinvoima">Ydinvoima</a></li>
       </ul>
     </div>
 	</nav>

@@ -1,4 +1,4 @@
-var app = angular.module('cleanEnergy', ['ngRoute', 'chart.js']);
+var app = angular.module('cleanEnergy', ['ngRoute', 'googlechart']);
 
 app.config(function($routeProvider) {
 		$routeProvider

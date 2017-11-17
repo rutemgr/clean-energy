@@ -1,3 +1,6 @@
 Vesi - tuntitieto (tällä hetkellä vain reaaliaikatieto)
 Ydinvoima - tuntitieto
 Aurinko - Tämänhetkinen tieto, ei varmaan saatavilla (arvio?)
+
+Swaggeriin paremmat ohjeet, kuvaukset 
+event-controlleriin ja events controlleriin

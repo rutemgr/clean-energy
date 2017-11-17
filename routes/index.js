@@ -10,8 +10,6 @@ module.exports = function(app) {
 			request(apiRequest.createOptions("wind"), function(error, response, body) {
 				if (!error && response.statusCode == 200) {
 					var apiData = JSON.parse(body);
-					var l = apiData.length;
-					console.log(apiData[l-1]);
 					res.send({name: "wind", data: apiData});
 				}
 			});
